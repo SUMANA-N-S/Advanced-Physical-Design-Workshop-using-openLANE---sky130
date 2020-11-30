@@ -43,6 +43,7 @@ In Linux operating system open a terminal and check for the required pdks, tcl s
 
 
 Process Design Kit(PDKs) contains device models, digital standard cell libraries, process design rules, input-output libraries and other important collection of files used for fabrication.
+![1](https://user-images.githubusercontent.com/75219944/100634299-202d2b80-3355-11eb-848b-c541b8bff5c8.PNG)
 
 
 >./flow.tcl -interactive   //command to invoke openlane
@@ -53,7 +54,8 @@ Process Design Kit(PDKs) contains device models, digital standard cell libraries
 Design preperation step with a custom folder name(sns_run) to store all the results.
 
 > prep -design -tag sns_run -overwrite
-
+![4](https://user-images.githubusercontent.com/75219944/100634333-2de2b100-3355-11eb-98c7-147a28eca00a.PNG)
+![5](https://user-images.githubusercontent.com/75219944/100634346-333ffb80-3355-11eb-9a33-8bb9d4d42077.PNG)
 
 ### Synthesis:
 
@@ -69,7 +71,9 @@ Design preperation step with a custom folder name(sns_run) to store all the resu
    config.tcl file under picorv32a directory
    
    > run_synthesis  //openlane command to run synthesis
-   
+   ![7](https://user-images.githubusercontent.com/75219944/100634494-62ef0380-3355-11eb-9cb5-88a82e88693e.PNG)
+
+
    
    To find flop ratio get value of number of flip-flops and number of cells from synthesis report and calculate the ratio of flip-flops to cells.
    
@@ -89,9 +93,12 @@ In openlane tools used for floorplan:
 > run_floorplan  //command to run floorplan
 
 
-To view the floorplan in magic :
-Magic is the Layout tool in openlane which performs DRC checks
 
+Magic is the Layout tool in openlane which performs DRC checks
+View after floorplan in magic :
+
+![10](https://user-images.githubusercontent.com/75219944/100634505-65515d80-3355-11eb-8664-f26e4b2378da.PNG)
+![11](https://user-images.githubusercontent.com/75219944/100634517-6a161180-3355-11eb-8612-4e8cb94dfebf.PNG)
 
 
 ### Placement 
@@ -118,7 +125,9 @@ Openlane tools for placement
 
 > run_placement  //openlane command to run placement
 
-To view the design post placement:
+View of the design post placement in magic:
+![13](https://user-images.githubusercontent.com/75219944/100634527-6d110200-3355-11eb-84e7-fae37b06771f.PNG)
+
 
  To change the input-output pins alignment set the variable FP_IO_MODE.
  
