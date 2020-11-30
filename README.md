@@ -4,17 +4,18 @@
 
 ## Introduction to Chip Design.
 
-   Integrated circuit (IC) also called microelectronic circuit, microchip or chip, is an assembly of electronic components fabricated as a single unit, in which miniaturized active devices (e.g., transistors and diodes) and passive devices (e.g., capacitors and resistors) and their interconnections are built up on a thin substrate of semiconductor material (typically silicon). The resulting circuit is thus a small monolithic “chip,” which may be as small as a few square centimetres or only a few square millimetre.
-   To protect chips from corrosion, physical damage and to allow for mounting of the electrical contacts connecting them to the PCB chips are pun into protectice packages. Each package contains several chips Foundry IPs Macros etc as shown in Fig.1. 
-   
+   Integrated circuit (IC) also called as microelectronic circuit, microchip or chip, is an assembly of electronic components fabricated as a single unit, in which miniaturized active devices (e.g., transistors and diodes) and passive devices (e.g., capacitors and resistors) and their interconnections are built up on a thin substrate of semiconductor material (typically silicon). The resulting circuit is thus a small monolithic “chip,” which may be as small as a few square centimetres or only a few square millimetre.
+   To protect chips from corrosion, physical damage and to allow for mounting of the electrical contacts connecting them to the PCB chips are put into protective packages. Each package contains several chips, Foundry IPs, Macros etc as shown in Fig. 
+   ![Screenshot_20201130-211727~01](https://user-images.githubusercontent.com/75219944/100631729-0a6a3700-3352-11eb-9aa6-7520f8f9f033.png)
    
    Types of packaging:
    - Pin-grid array: These are for socketing.
    - Quad flat pack: A lead-frame package of the leadless variety.
    - Quad flat no-lead: A tiny package, the size of a chip, used for surface mounting.
                  
-   A single chip is the hardware part of a huge package or a system, communication between the system hardware, software and application software is very important to achieve required output (Fig.2). User input is collected through application software in the form of application program. system software consists of operating system compiler and assembler. System software converts application program into machine language program, this machine language program is given as input to the hardware.
-Fig.1 Example of a Package.
+   A single chip is the hardware part of a huge package or a system, communication between the system hardware, software and application software is very important to achieve required functionality. User input is collected through application software in the form of application program. system software consists of operating system compiler and assembler. System software converts application program into machine language program, this machine language program is given as input to the hardware.
+Figure below is an example of a Package.
+
 
    A Chip consists of several components as listed below
    - Pads - Through which signals can pass inside or outside the chip.
