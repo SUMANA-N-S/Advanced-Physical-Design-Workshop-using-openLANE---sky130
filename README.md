@@ -74,6 +74,8 @@ Design preperation step with a custom folder name(sns_run) to store all the resu
    
    config.tcl file under picorv32a directory
    
+   ![CONFIG_tcl](https://user-images.githubusercontent.com/75219944/100646007-7b661a80-3363-11eb-9444-5edb6ea63de2.png)
+   
    > run_synthesis  //openlane command to run synthesis
    
    ![7](https://user-images.githubusercontent.com/75219944/100634494-62ef0380-3355-11eb-9cb5-88a82e88693e.PNG)
