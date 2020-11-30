@@ -175,9 +175,14 @@ To view the layout of inverter in magic prompt
 In magic tkcon terminal to extract sky130_inv into sky130_inv.ext
  > extract all
  
+ ![20](https://user-images.githubusercontent.com/75219944/100636619-e9a4e000-3357-11eb-96f8-238f9f58ee6b.PNG)
+
+ 
  Extracting with parasitics to spice file
  > ext2spice cthresh 0 rthresh 0
  
+ ![21](https://user-images.githubusercontent.com/75219944/100636627-eb6ea380-3357-11eb-9632-58d80d2ef2cf.PNG)
+
  #### Creating SPICE deck using sky130 tech file:
  
  To characterise inverter using sky130 model files 
@@ -189,9 +194,18 @@ In magic tkcon terminal to extract sky130_inv into sky130_inv.ext
  > plot y vs time a 
  where y is the output and a is the input pin
  
+ ![24](https://user-images.githubusercontent.com/75219944/100636635-ee699400-3357-11eb-8398-5cd67f82dc0f.PNG)
+
+ ![25](https://user-images.githubusercontent.com/75219944/100636651-f1648480-3357-11eb-8e10-db8ae6e576bc.PNG)
  
  
 As there are spikes in the output wave form change the value of capacitance load in sky130_inv.spice
+
+
+![26](https://user-images.githubusercontent.com/75219944/100636687-f88b9280-3357-11eb-85c0-53a1511825b4.PNG)
+ 
+![27](https://user-images.githubusercontent.com/75219944/100636668-f45f7500-3357-11eb-9a31-f5526bc6bb9e.PNG)
+
 
 
 Characterizing:
@@ -222,7 +236,7 @@ Edit the config file to include the variables required for synthesis of std cell
 
 In openlane flow after design preperation add the lef files
 > set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
->add_lefs -src $lefs
+> add_lefs -src $lefs
 
 > run_synthesis
  
