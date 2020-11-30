@@ -37,12 +37,15 @@ Figure below is an example of such system.
    OpenLANE is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, Fault, OpenPhySyn, SPEF-Extractor and custom methodology scripts for design exploration and optimization.
    
 Fig: Openlane Flow (RTL to GDSII)
+
+
 ![openlane flow 1](https://user-images.githubusercontent.com/75219944/100633312-f32c4900-3353-11eb-9e51-77e77cf7f123.png)
 
 In Linux operating system open a terminal and check for the required pdks, tcl scripts and configuration files under the working directory.
 
 
 Process Design Kit(PDKs) contains device models, digital standard cell libraries, process design rules, input-output libraries and other important collection of files used for fabrication.
+
 ![1](https://user-images.githubusercontent.com/75219944/100634299-202d2b80-3355-11eb-848b-c541b8bff5c8.PNG)
 
 
@@ -54,6 +57,7 @@ Process Design Kit(PDKs) contains device models, digital standard cell libraries
 Design preperation step with a custom folder name(sns_run) to store all the results.
 
 > prep -design -tag sns_run -overwrite
+
 ![4](https://user-images.githubusercontent.com/75219944/100634333-2de2b100-3355-11eb-98c7-147a28eca00a.PNG)
 ![5](https://user-images.githubusercontent.com/75219944/100634346-333ffb80-3355-11eb-9a33-8bb9d4d42077.PNG)
 
@@ -71,6 +75,7 @@ Design preperation step with a custom folder name(sns_run) to store all the resu
    config.tcl file under picorv32a directory
    
    > run_synthesis  //openlane command to run synthesis
+   
    ![7](https://user-images.githubusercontent.com/75219944/100634494-62ef0380-3355-11eb-9cb5-88a82e88693e.PNG)
 
 
@@ -126,6 +131,7 @@ Openlane tools for placement
 > run_placement  //openlane command to run placement
 
 View of the design post placement in magic:
+
 ![13](https://user-images.githubusercontent.com/75219944/100634527-6d110200-3355-11eb-84e7-fae37b06771f.PNG)
 
 
@@ -144,17 +150,27 @@ Example of cloning an inverter cell from github into openlane standard cell libr
 in the open lane directory
 > git clone URL of the README.md of required cell from github
 
+
+![gitclone](https://user-images.githubusercontent.com/75219944/100635830-01c82f80-3357-11eb-8ee6-f9bbc0c74ac7.PNG)
+
+
 vsdstdcelldesign - New directory created after cloning
 
+![17](https://user-images.githubusercontent.com/75219944/100635861-0a206a80-3357-11eb-9845-1cbcd4aae493.PNG)
 
 
 
 
 After cloning a cell copy the tech file from pdks into vsdstdcelldesign
 
+![18](https://user-images.githubusercontent.com/75219944/100635867-0bea2e00-3357-11eb-890c-5ed139784efa.PNG)
+
 To view the layout of inverter in magic prompt
 
 > magic -T sky130.tech sky130_inv.mag &
+
+![19](https://user-images.githubusercontent.com/75219944/100635874-0db3f180-3357-11eb-875f-70d2e4e339f3.PNG)
+
 
 In magic tkcon terminal to extract sky130_inv into sky130_inv.ext
  > extract all
