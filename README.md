@@ -15,6 +15,7 @@
                  
    A single chip is the hardware part of a huge package or a system, communication between the system hardware, software and application software is very important to achieve required functionality. User input is collected through application software in the form of application program. system software consists of operating system compiler and assembler. System software converts application program into machine language program, this machine language program is given as input to the hardware.
 Figure below is an example of such system.
+![Screenshot_20201130-212919~01](https://user-images.githubusercontent.com/75219944/100633576-469e9700-3354-11eb-831d-7a69d361e907.png)
 
 
 
