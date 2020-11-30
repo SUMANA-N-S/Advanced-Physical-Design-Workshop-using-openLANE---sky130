@@ -15,7 +15,7 @@
                  
    A single chip is the hardware part of a huge package or a system, communication between the system hardware, software and application software is very important to achieve required functionality. User input is collected through application software in the form of application program. system software consists of operating system compiler and assembler. System software converts application program into machine language program, this machine language program is given as input to the hardware.
 Figure below is an example of such system.
-![Uploading Screenshot_20201130-212919~01.png…]()
+
 
 
 
@@ -36,6 +36,7 @@ Figure below is an example of such system.
    OpenLANE is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, Fault, OpenPhySyn, SPEF-Extractor and custom methodology scripts for design exploration and optimization.
    
 Fig: Openlane Flow (RTL to GDSII)
+![openlane flow 1](https://user-images.githubusercontent.com/75219944/100633312-f32c4900-3353-11eb-9e51-77e77cf7f123.png)
 
 In Linux operating system open a terminal and check for the required pdks, tcl scripts and configuration files under the working directory.
 
