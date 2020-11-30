@@ -7,6 +7,7 @@
    Integrated circuit (IC) also called microelectronic circuit, microchip or chip, is an assembly of electronic components fabricated as a single unit, in which miniaturized active devices (e.g., transistors and diodes) and passive devices (e.g., capacitors and resistors) and their interconnections are built up on a thin substrate of semiconductor material (typically silicon). The resulting circuit is thus a small monolithic “chip,” which may be as small as a few square centimetres or only a few square millimetre.
    To protect chips from corrosion, physical damage and to allow for mounting of the electrical contacts connecting them to the PCB chips are pun into protectice packages. Each package contains several chips Foundry IPs Macros etc as shown in Fig.1. 
    
+   
    Types of packaging:
    - Pin-grid array: These are for socketing.
    - Quad flat pack: A lead-frame package of the leadless variety.
