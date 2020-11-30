@@ -221,10 +221,16 @@ In magic layout activating the tracks to ensure that A and Y pins are placed on 
 In tkcon to activate grids
 > grid 0.46um 0.34um 0.23um 0.17um
 
+
+![30](https://user-images.githubusercontent.com/75219944/100637709-2fae7380-3359-11eb-8f01-4ebf000bb042.PNG)
+
+
 Giving custom name to the standard cell :
    In tkcon terminal 
 > save sky130_vsdinv.mag
 > magic -T sky130_tech sky130_vsdinv.mag &
+
+
 
 To create a lef file for vsd_inv - in tkcon 
 > lef write 
@@ -234,9 +240,15 @@ For synthesis a library which has the cell defnition is necessary so copy this l
 Edit the config file to include the variables required for synthesis of std cell inverter.
 
 
+![33](https://user-images.githubusercontent.com/75219944/100637722-3341fa80-3359-11eb-9340-14122dd03881.PNG)
+
+
 In openlane flow after design preperation add the lef files
 > set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 > add_lefs -src $lefs
+
+![35](https://user-images.githubusercontent.com/75219944/100637747-3a690880-3359-11eb-873c-2fa9f279dbaf.PNG)
+
 
 > run_synthesis
  
@@ -244,8 +256,13 @@ In synthesis report observe the chip area, wns-maximum slack and tns-total negat
 
 As the slack is violated change the synthesis strategy, buffering, sizing  to reduce the slack violations and run synthesis again.
 
+![37](https://user-images.githubusercontent.com/75219944/100637764-3e952600-3359-11eb-8865-95e11f1fd956.PNG)
+
+
 After synthesis with reduced slack violations run placement 
 > run_placement
+
+![39](https://user-images.githubusercontent.com/75219944/100637775-4228ad00-3359-11eb-9d7f-8ea412083830.PNG)
 
 
 To configure OpenSTA for post syntheis timing analysis:
@@ -257,6 +274,8 @@ Further reduce the slack violations by optimizing the fanout, replacing the nets
 ### Clock Tree Sinthesis
 
 The goal of clock tree synthesis (CTS) is to minimize skew and insertion delay. After CTS hold slack should improve. Clock tree begins at .sdc defined clock source and ends at stop pins of flop. In clock tree optimization (CTO) clock can be shielded so that noise is not coupled to other signals. But shielding increases area by 12 to 15%. Since the clock signal is global in nature the same metal layer used for power routing is used for clock also. CTO is achieved by buffer sizing, gate sizing, buffer relocation, level adjustment and High Fanout Nets synthesis. We try to improve setup slack in pre-placement, in placement and post placement optimization before CTS stages while neglecting hold slack. In post placement optimization after CTS hold slack is improved. As a result of CTS lot of buffers are added.
+
+
 openlane tool - TritonCTS - Synthesizes the clock distribution network (the clock tree)
 > run_cts
 
@@ -281,7 +300,7 @@ Openlane tools for routing:
 
 > run_routing
 
-
+![42](https://user-images.githubusercontent.com/75219944/100637782-448b0700-3359-11eb-84ea-6468547f1d08.PNG)
 
 
 
