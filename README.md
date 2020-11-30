@@ -70,7 +70,7 @@ Design preperation step with a custom folder name(sns_run) to store all the resu
    - ABC : for technology mapping
    - OpenSTA : to perform static timing analysis on resulting netlist.
    
-   After design preperation review files in picorv32a directory before perfoeming synthesis.
+   After design preperation review files in picorv32a directory before performing synthesis.
    
    config.tcl file under picorv32a directory
    
@@ -84,7 +84,7 @@ Design preperation step with a custom folder name(sns_run) to store all the resu
    
    ### Floorplan:
    
-   Floorplanning is the process of identifying structures that should be placed close together, and allocating space for them in such a manner as to meet the sometimes conflicting goals of available space (cost of the chip), required performance, and the desire to have everything close to everything else.
+   Floorplanning is the process of identifying structures that should be placed close together, and allocating space for them in such a manner as to meet the conflicting goals of available space (cost of the chip), required performance.
 
 Based on the area of the design and the hierarchy, a suitable floorplan is decided upon. Floorplanning takes into account the macros used in the design, memory, other IP cores and their placement needs, the routing possibilities, and also the area of the entire design. Floorplanning also determines the IO structure and aspect ratio of the design. A bad floorplan will lead to wastage of die area and routing congestion. 
 
@@ -100,6 +100,8 @@ In openlane tools used for floorplan:
 
 
 Magic is the Layout tool in openlane which performs DRC checks
+
+
 View after floorplan in magic :
 
 ![10](https://user-images.githubusercontent.com/75219944/100634505-65515d80-3355-11eb-8664-f26e4b2378da.PNG)
@@ -139,7 +141,7 @@ View of the design post placement in magic:
  
  > set ::env(FP_IO_MODE) 1
  
- The variable value of 1 performs euidistant placement of pins. If the variable is set to higher value pin placement changes.
+ The variable value of 1 performs equidistant placement of pins. If the variable is set to higher value pin placement changes.
  
 #### Cell cloning form Github:
 
@@ -147,7 +149,7 @@ A standard cell available in github can be cloned and included into openlane sta
 
 Example of cloning an inverter cell from github into openlane standard cell library.
 
-in the open lane directory
+in the openlane directory
 > git clone URL of the README.md of required cell from github
 
 
@@ -161,7 +163,7 @@ vsdstdcelldesign - New directory created after cloning
 
 
 
-After cloning a cell copy the tech file from pdks into vsdstdcelldesign
+After cloning a cell, copy the tech file from pdks into vsdstdcelldesign
 
 ![18](https://user-images.githubusercontent.com/75219944/100635867-0bea2e00-3357-11eb-890c-5ed139784efa.PNG)
 
@@ -216,7 +218,7 @@ Characterizing:
 
 #### Extraction of LEF file:
 
-In magic layout activating the tracks to ensure that A and Y pins are placed on the intersection of tracks.
+In magic layout, activate the tracks to ensure that A and Y pins are placed on the intersection of tracks.
 
 In tkcon to activate grids
 > grid 0.46um 0.34um 0.23um 0.17um
@@ -235,7 +237,7 @@ Giving custom name to the standard cell :
 To create a lef file for vsd_inv - in tkcon 
 > lef write 
 
-For synthesis a library which has the cell defnition is necessary so copy this lef file into picoprv32a src directory
+For synthesis, a library which has the cell defnition is necessary so copy this lef file into picoprv32a src directory
 
 Edit the config file to include the variables required for synthesis of std cell inverter.
 
@@ -300,7 +302,13 @@ Openlane tools for routing:
 
 > run_routing
 
-![42](https://user-images.githubusercontent.com/75219944/100637782-448b0700-3359-11eb-84ea-6468547f1d08.PNG)
+![inverter_route1](https://user-images.githubusercontent.com/75219944/100643065-99ca1700-335f-11eb-8943-39f3000aaf73.png)
+
+## ACKNOWLEDGEMENTS
+
+- Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)
+- Nickson Jose, Teaching Assistsnt (VSD Corp. Pvt. Ltd)
+
 
 
 
